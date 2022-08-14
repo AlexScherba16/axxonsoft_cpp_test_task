@@ -1,7 +1,8 @@
 # ⚡️ AxxonSoft c++ test task ⚡
 
 ## 📖 Table of contents
-* [General info](#general-info)
+* [General info](#General info)
+* [Structure](#Structure)
 
 ## ℹ️ General info
 Test task for C++ Software Engineer
@@ -17,3 +18,15 @@ Requirements:
 * Must be written in C++
 * Can use third party libraries if needed (i.e. Boost)
 * Must utilise all available CPU cores
+
+
+## 🌁 Structure
+``` text
+.
+├── CMakeLists.txt
+├── app
+│   └── main.cpp
+
+```
+
+The application launch point is located in the directory [app/](app)
