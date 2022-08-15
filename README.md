@@ -26,7 +26,18 @@ Requirements:
 ├── CMakeLists.txt
 ├── app
 │   └── main.cpp
-
+├── include
+│   └── exception
+│       └── ...
+├── test
+│   └── exception
+│       └── ...
+│   └── CMakeLists.txt
+│   └── main.cpp
 ```
 
-The application launch point is located in the directory [app/](app)
+* [app/](app) - Application launch point is located in the directory
+* [include/](include/) - Header files directory
+* * [include/exception](include/exception) - Exception header files directory
+* [test/](test/) - Unit tests cases directory
+* * [test/exception](test/exception) - Exception classes test cases directory
