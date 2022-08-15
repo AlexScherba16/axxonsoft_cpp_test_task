@@ -7,7 +7,7 @@ namespace file_searcher {
 namespace text_files_searcher {
 
 /// RecursiveTextFileSearcher - iterates directories recursively and builds a collection of .txt files paths
-class RecursiveTextFileSearcher : public IFileSearcher {
+class RecursiveTextFileSearcher final : public IFileSearcher {
 
 public:
     RecursiveTextFileSearcher();

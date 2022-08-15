@@ -33,8 +33,11 @@ TEST(RecursiveTextFileSearcherTest, OkPathes) {
     // "text_files_storage" should be located near unit tests binary file
     // arrange
     std::vector<RecursiveTextFileSearcherTestSuite> suits {
-            {"text_files_storage/books_for_demo", "", 9},
-            {"text_files_storage", "", 11},
+        {"files_storage/txt_files/1_file_1000_lines", "", 1},
+        {"files_storage/txt_files/10_files_0_lines", "", 10},
+        {"files_storage/txt_files/10_files_10_000_000_lines", "", 10},
+        {"files_storage/txt_files/10_files_550_000_lines", "", 10},
+        {"files_storage", "", 31},
     };
     file_searcher::text_files_searcher::RecursiveTextFileSearcher searcher;
 

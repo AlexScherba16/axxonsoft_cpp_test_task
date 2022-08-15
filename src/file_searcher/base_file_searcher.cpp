@@ -10,7 +10,9 @@ bool IFileSearcher::isFile(const std::string& filePath) {
         boost::filesystem::path pathObj(filePath);
 
         // check if path exists and is of a regular file
-        if (boost::filesystem::exists(pathObj) && boost::filesystem::is_regular_file(pathObj))
+        if (boost::filesystem::exists(pathObj) &&
+            boost::filesystem::is_regular_file(pathObj) &&
+            !boost::filesystem::is_symlink(pathObj))
             return true;
     }
     catch (boost::filesystem::filesystem_error & e) {
