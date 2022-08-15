@@ -29,5 +29,5 @@ add_custom_command (
         TARGET ${AXXONSOFT_TEST_PROJECT}
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/deps ${CMAKE_CURRENT_BINARY_DIR}
+        ${CMAKE_SOURCE_DIR}/thirdparty ${CMAKE_CURRENT_BINARY_DIR}
 )

@@ -1,3 +1,3 @@
-[submodule "deps/text_files_storage"]
-	path = deps/text_files_storage
+[submodule "thirdparty/text_files_storage"]
+	path = thirdparty/text_files_storage
 	url = https://github.com/AlexScherba16/text_files_storage
