@@ -4,6 +4,7 @@ project(linecounter)
 set(CMAKE_CXX_STANDARD 11)
 
 set(Boost_USE_STATIC_LIBS ON)
+find_package(Boost COMPONENTS program_options thread filesystem REQUIRED)
 
 # catch all warnings
 add_compile_options(-Wall -Wextra -pedantic -Werror)
@@ -37,10 +38,6 @@ add_subdirectory(test)
 # build application
 add_executable(${CMAKE_PROJECT_NAME} app/main.cpp ${ALL_SRCS})
 
-# link libs
-target_link_libraries(${CMAKE_PROJECT_NAME}
-        pthread
-        boost_thread
-        boost_program_options
-        boost_system
-        boost_filesystem)
+# static linking of libraries is used to solve problems with running
+# in a lightweight docker container where there are no dynamic libraries
+target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE ${Boost_LIBRARIES})
