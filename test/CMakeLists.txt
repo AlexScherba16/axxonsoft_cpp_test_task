@@ -13,7 +13,13 @@ add_executable(${AXXONSOFT_TEST_PROJECT}
         ${SOURCE_DIRECTORY}/file_searcher/base_file_searcher.cpp
         ${INCLUDE_DIRECTORY}/file_searcher/text_files_searcher/recursive_file_searcher.h
         ${SOURCE_DIRECTORY}/file_searcher/text_files_searcher/recursive_file_searcher.cpp
-        file_searcher/text_files_searcher/recursive_file_searcher_testcases.cpp)
+        file_searcher/text_files_searcher/recursive_file_searcher_testcases.cpp
+
+        ${INCLUDE_DIRECTORY}/counter/base_counter.h
+        ${INCLUDE_DIRECTORY}/counter/threaded_lines_counter/threaded_lines_counter.h
+        ${SOURCE_DIRECTORY}/counter/threaded_lines_counter/threaded_lines_counter.cpp
+        counter/threaded_lines_counter/threaded_lines_counter_testcases.cpp
+        )
 
 target_link_libraries(${AXXONSOFT_TEST_PROJECT}
         gtest

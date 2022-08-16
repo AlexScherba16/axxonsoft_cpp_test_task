@@ -34,21 +34,29 @@ Requirements:
 │   └── main.cpp
 │  
 ├── include
-│   ├── exception
-│   │   └── ...
 │   ├── cmd_line_parser
 │   │   └── ...
-│   ├── file_searcher
+│   ├── counter
+│   │   └── ...
+│   ├── exception
+│   │   └── ...
+│   └── file_searcher
 │       └── ...
 ├── src
 │   ├── cmd_line_parser
 │   │   └── ...
+│   ├── counter
+│   │   └── ...
 │   └── file_searcher
 │       └── ...
 ├── test
+│   ├── cmd_line_parser
+│   │   └── ...
+│   ├── counter
+│   │   └── ...
 │   ├── exception
 │   │   └── ...
-│   ├── cmd_line_parser
+│   ├── file_searcher
 │   │   └── ...
 │   ├── CMakeLists.txt
 │   └── main.cpp
@@ -59,14 +67,17 @@ Requirements:
 
 * [app/](app) - Application launch point is located in the directory
 * [include/](include/) - Header files directory
-* * [include/exception](include/exception) - Exception header files directory
 * * [include/cmd_line_parser](include/cmd_line_parser) - Command line parser header files directory
+* * [include/counter](include/counter) - Counter interface and its inheritants header files directory
+* * [include/exception](include/exception) - Exception header files directory
 * * [include/file_searcher](include/file_searcher) - File searcher interface and its inheritants header files directory
 * [src/](src/) - Source code files directory
 * * [src/cmd_line_parser](src/cmd_line_parser) - Command line parser source files directory
+* * [src/counter](src/counter) - Counter interface and its inheritants source files
 * * [src/file_searcher](src/file_searcher) - File searcher interface and its inheritants source files
 * [test/](test/) - Unit tests cases directory
 * * [test/cmd_line_parser](test/cmd_line_parser) - Command line parser class test cases directory
+* * [test/counter](test/counter) - Counter interface inheritants test cases directory
 * * [test/exception](test/exception) - Exception classes test cases directory
 * * [test/file_searcher](test/file_searcher) - File searcher interface inheritants test cases directory
 * [thirdparty/](thirdparty/) - Directory that contains the various dependencies of the current project.
