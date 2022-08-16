@@ -5,17 +5,17 @@
 namespace file_searcher {
 namespace text_files_searcher {
 
-RecursiveTextFileSearcher::RecursiveTextFileSearcher() : IFileSearcher() {
+RecursiveTextFileSearcher::RecursiveTextFileSearcher() {
     _tag = std::move("RECURSIVE_TEXT_FILES_SEARCHER");
     _extension = std::move(".txt");
 }
 
-std::vector<std::string> RecursiveTextFileSearcher::getFiles(const std::string& root_path) {
+std::vector<std::string> RecursiveTextFileSearcher::get_files(const std::string& root_path) {
     // validate income parameters
     if (root_path.empty())
         throw exception::GeneralException(_tag, std::string{"empty directory path"});
 
-    if (!isDirectory(root_path))
+    if (!is_directory(root_path))
         throw exception::GeneralException(_tag, std::string{"invalid directory path"});
 
     // files collection
@@ -32,7 +32,7 @@ std::vector<std::string> RecursiveTextFileSearcher::getFiles(const std::string& 
             filePath = boost::filesystem::path((*i)).string();
 
             // make file validation and check file extension
-            if (isFile(filePath) && getFileExtension(filePath) == _extension) {
+            if (is_file(filePath) && get_file_extension(filePath) == _extension) {
                 files.emplace_back(std::move(filePath));
             }
         }

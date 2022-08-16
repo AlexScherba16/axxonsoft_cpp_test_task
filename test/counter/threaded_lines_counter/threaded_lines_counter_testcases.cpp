@@ -1,5 +1,5 @@
-#include "counter/threaded_lines_counter/threaded_lines_counter.h"
 #include "file_searcher/text_files_searcher/recursive_file_searcher.h"
+#include "counter/threaded_lines_counter/threaded_lines_counter.h"
 #include <gtest/gtest.h>
 
 struct ThreadedLinesCounterTestSuite {
@@ -33,7 +33,7 @@ TEST(ThreadedCounterTest, CountFilledFilesCollection) {
 
     // act and assert
     for (const auto& suite : suits) {
-        auto files = searcher.getFiles(suite.files_directory_path);
+        auto files = searcher.get_files(suite.files_directory_path);
         ThreadedLinesCounter counter (std::move(files));
         ASSERT_EQ(counter.count(), suite.lines);
     }

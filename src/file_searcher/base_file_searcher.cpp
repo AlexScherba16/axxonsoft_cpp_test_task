@@ -4,7 +4,7 @@
 
 namespace file_searcher{
 
-bool IFileSearcher::isFile(const std::string& filePath) {
+bool IFileSearcher::is_file(const std::string& filePath) {
     try{
         // create a Path object from given path string
         boost::filesystem::path pathObj(filePath);
@@ -22,7 +22,7 @@ bool IFileSearcher::isFile(const std::string& filePath) {
     return false;
 }
 
-bool IFileSearcher::isDirectory(const std::string& dirPath) {
+bool IFileSearcher::is_directory(const std::string& dirPath) {
     try {
         // create a Path object from given path string
         boost::filesystem::path pathObj(dirPath);
@@ -38,7 +38,7 @@ bool IFileSearcher::isDirectory(const std::string& dirPath) {
     return false;
 }
 
-std::string IFileSearcher::getFileExtension(const std::string& filePath){
+std::string IFileSearcher::get_file_extension(const std::string& filePath){
     // create a Path object from given string
     boost::filesystem::path pathObj(filePath);
 
@@ -52,7 +52,7 @@ std::string IFileSearcher::getFileExtension(const std::string& filePath){
     return "";
 }
 
-std::string IFileSearcher::getFileName(const std::string& filePath){
+std::string IFileSearcher::get_file_name(const std::string& filePath){
     // create a path object from given string
     boost::filesystem::path pathObj(filePath);
 

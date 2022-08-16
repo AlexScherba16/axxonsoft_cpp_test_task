@@ -8,7 +8,6 @@ namespace counter {
 /// ICounter - general item counter interface
 class ICounter {
 public:
-    ICounter() = default;
     virtual ~ICounter() = default;
     virtual uint64_t count() = 0;
 };
