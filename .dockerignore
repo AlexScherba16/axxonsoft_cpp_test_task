@@ -1,0 +1,15 @@
+.gitignore
+.dockerignore
+.idea
+Dockerfile
+Makefile
+*.md
+thirdparty
+thirdparty/
+thirdparty/**
+build
+build/
+build/**
+cmake-build-debug
+cmake-build-debug/
+cmake-build-debug/**
