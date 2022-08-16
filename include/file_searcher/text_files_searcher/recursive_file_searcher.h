@@ -13,7 +13,7 @@ public:
     RecursiveTextFileSearcher();
     ~RecursiveTextFileSearcher() = default;
 
-    std::vector<std::string> getFiles(const std::string& root_path) override;
+    std::vector<std::string> get_files(const std::string& root_path) override;
 };
 
 } // namespace text_files_searcher

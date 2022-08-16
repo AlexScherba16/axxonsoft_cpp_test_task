@@ -18,10 +18,10 @@ TEST(RecursiveTextFileSearcherTest, EmptyInvalidPathes) {
 
     // act and exception assert
     for (const auto& suite : suits) {
-        EXPECT_THROW(searcher.getFiles(suite.path), exception::GeneralException);
+        EXPECT_THROW(searcher.get_files(suite.path), exception::GeneralException);
 
         try {
-            searcher.getFiles(suite.path);
+            searcher.get_files(suite.path);
         }
         catch(exception::GeneralException& ex){
             ASSERT_STREQ(ex.what(), suite.exceptionText.c_str());
@@ -44,7 +44,7 @@ TEST(RecursiveTextFileSearcherTest, OkPathes) {
 
     // act and assert
     for (const auto& suite : suits) {
-        auto files = searcher.getFiles(suite.path);
+        auto files = searcher.get_files(suite.path);
         ASSERT_EQ(files.size(), suite.files);
     }
 }

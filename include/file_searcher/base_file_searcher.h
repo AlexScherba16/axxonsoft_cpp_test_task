@@ -12,14 +12,13 @@ protected:
     std::string _tag{"BASE_FILE_SEARCHER"};
     std::string _extension{""};
 
-    bool isFile(const std::string& filePath);
-    bool isDirectory(const std::string& dirPath);
-    std::string getFileExtension(const std::string& filePath);
-    std::string getFileName(const std::string& filePath);
+    bool is_file(const std::string& filePath);
+    bool is_directory(const std::string& dirPath);
+    std::string get_file_extension(const std::string& filePath);
+    std::string get_file_name(const std::string& filePath);
 
 public:
-    IFileSearcher() = default;
-    virtual std::vector<std::string> getFiles(const std::string& root_path) = 0;
+    virtual std::vector<std::string> get_files(const std::string& root_path) = 0;
     virtual ~IFileSearcher() = default;
 };
 
